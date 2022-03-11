@@ -1,0 +1,40 @@
+{% extends "__base__.html" %}
+{% block title %}{% endblock title %}
+{% block content %}
+<div class="dashboard-content border-dashed p-3 m-4 view-height">
+
+<form method="post">
+    {% csrf_token %}
+    <div class="mt-4 ml-4 mr-4">
+        <div class="row border-bottom border-3">
+            <div class="col"><h3 class="color-header text-uppercase">Edycja
+                planu</h3></div>
+            <div class="col d-flex justify-content-end mb-2">
+                <button type="submit"
+                        class="btn btn-color rounded-0 pt-0 pb-0 pr-4 pl-4">
+                    Zapisz
+                </button>
+            </div>
+        </div>
+
+        <table class="table borderless">
+            <tbody>
+            <tr class="d-flex">
+                <th scope="row" class="col-2">Nazwa Planu</th>
+                <td class="col-7">
+                    <input class="w-100 p-1" name="name" value="{{ plan.name }}">
+                </td>
+            </tr>
+            <tr class="d-flex">
+                <th scope="row" class="col-2">Opis przepisu</th>
+                <td class="col-7"><textarea name="description" class="w-100 p-1" rows="5">{{ plan.description }}</textarea>
+                </td>
+            </tr>
+        </table>
+            {% if alert_flag %}
+    <script>alert("Wypełnij poprawnie wszystkie pola")</script>
+    {% endif %}
+        </div>
+</form>
+</div>
+{% endblock content %}
