@@ -77,8 +77,4 @@ Projekt powstał podczas kursu **Python Developer w Coders Lab** i służył pra
 
 Materiały startowe oraz warstwa wizualna projektu zostały dostarczone przez Coders Lab.
 
-## 👨‍💻 Autor
-
-**Bartek**
-
 Projekt prezentowany jako część mojego portfolio programistycznego.
